@@ -7,7 +7,7 @@
 // import { FaExternalLinkSquareAlt } from "react-icons/fa";
 // export const metadata: Metadata = {
 //   title: "HUMAYUN | Projects",
- 
+
 // };
 // const ProjectsPage = async () => {
 //   const projects = await getAllProject();
@@ -110,7 +110,6 @@
 //           </div>
 //         ))}
 //       </div>
-      
 
 //       <div className="space-y-5 lg:space-y-8 mb-10 block lg:hidden">
 //         {projects?.data?.map((blog: TProject) => (
@@ -205,29 +204,30 @@
 
 // export default ProjectsPage;
 
-
-
-import { getAllProject } from "@/app/utils/actions/projectManagement"
-import type { TProject } from "@/types/types"
-import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import { FaExternalLinkSquareAlt } from "react-icons/fa"
+import { getAllProject } from "@/app/utils/actions/projectManagement";
+import type { TProject } from "@/types/types";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "HUMAYUN | Projects",
-}
+};
 
 const ProjectsPage = async () => {
-  const projects = await getAllProject()
+  const projects = await getAllProject();
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header with gradient underline */}
       <div className="flex flex-col items-center justify-center mb-12">
-        <h1 className="text-3xl md:text-4xl text-center font-bold text-white relative">
-          All <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Projects</span>
-          <span className="absolute -bottom-3 left-0 right-0 mx-auto w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></span>
+        <h1 className="text-3xl md:text-4xl text-center font-bold text-white relative border-b-2 border-[#64B5F6] inline-block">
+          All{" "}
+          <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+            Projects
+          </span>
+        
         </h1>
       </div>
 
@@ -264,21 +264,43 @@ const ProjectsPage = async () => {
 
                   {/* Project Links - Desktop */}
                   <div className="hidden md:flex flex-wrap gap-4 mb-4">
-                    <ProjectLink href={`/projects/${project?._id}`} label="Details" />
-                    <ProjectLink href={project?.live_link} label="Live Site" external />
-                    <ProjectLink href={project.client_link} label="Client Code" external />
-                    <ProjectLink href={project.server_link} label="Server Code" external />
+                    <ProjectLink
+                      href={`/projects/${project?._id}`}
+                      label="Details"
+                    />
+                    <ProjectLink
+                      href={project?.live_link}
+                      label="Live Site"
+                      external
+                    />
+                    <ProjectLink
+                      href={project.client_link}
+                      label="Client Code"
+                      external
+                    />
+                    <ProjectLink
+                      href={project.server_link}
+                      label="Server Code"
+                      external
+                    />
                   </div>
 
                   {/* Project Description */}
-                  <p className="text-gray-300 mb-4 leading-relaxed">{project?.short_description}</p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {project?.short_description}
+                  </p>
 
                   {/* Technologies */}
                   <div className="mb-4">
-                    <h3 className="text-white font-semibold mb-2">Technologies:</h3>
+                    <h3 className="text-white font-semibold mb-2">
+                      Technologies:
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {project?.technology.split(",").map((tech, index) => (
-                        <span key={index} className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm">
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-blue-900/30 text-blue-300 rounded-full text-sm"
+                        >
                           {tech.trim()}
                         </span>
                       ))}
@@ -288,19 +310,44 @@ const ProjectsPage = async () => {
 
                 {/* Project Links - Mobile */}
                 <div className="flex md:hidden justify-between flex-wrap gap-y-2 mt-4 border-t border-gray-700 pt-4">
-                  <ProjectLink href={`/projects/${project?._id}`} label="Details" compact />
-                  <ProjectLink href={project?.live_link} label="Live" external compact />
-                  <ProjectLink href={project.client_link} label="Client" external compact />
-                  <ProjectLink href={project.server_link} label="Server" external compact />
+                  <ProjectLink
+                    href={`/projects/${project?._id}`}
+                    label="Details"
+                    compact
+                  />
+                  <ProjectLink
+                    href={project?.live_link}
+                    label="Live"
+                    external
+                    compact
+                  />
+                  <ProjectLink
+                    href={project.client_link}
+                    label="Client"
+                    external
+                    compact
+                  />
+                  <ProjectLink
+                    href={project.server_link}
+                    label="Server"
+                    external
+                    compact
+                  />
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
+
+      <div className="flex items-center justify-center mb-10">
+        <button className="px-4 py-2 rounded-md bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+          Show More
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 // Reusable link component
 const ProjectLink = ({
@@ -309,10 +356,10 @@ const ProjectLink = ({
   external = false,
   compact = false,
 }: {
-  href: string
-  label: string
-  external?: boolean
-  compact?: boolean
+  href: string;
+  label: string;
+  external?: boolean;
+  compact?: boolean;
 }) => {
   return (
     <Link
@@ -329,7 +376,7 @@ const ProjectLink = ({
       {label}
       <FaExternalLinkSquareAlt className={compact ? "text-xs" : "text-sm"} />
     </Link>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;

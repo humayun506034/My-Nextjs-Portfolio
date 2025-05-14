@@ -32,7 +32,7 @@ const MyEducation = () => {
                 </h1>
                 <h2>Rangpur Polytechnic Institute, Rangpur</h2>
                 <p>August 2020 - January 2025</p>
-                <p>Result - The file result has not been published yet.</p>
+                <p>Result - 3.77 out of 4.00</p>
               </div>{" "}
               <div className="flex flex-col justify-center items-center">
                 <div className="h-5 w-5 rounded-full bg-blue-300"></div>
@@ -44,7 +44,7 @@ const MyEducation = () => {
                 </h1>
                 <h2>Rangpur Polytechnic Institute, Rangpur</h2>
                 <p>August 2020 - January 2025</p>
-                <p>Result - The file result has not been published yet.</p>
+                <p>Result - 3.77 out of 4.00</p>
               </div>
               <div className="w-1/2 hidden md:block"></div>
             </div>
@@ -137,7 +137,7 @@ const MyEducation = () => {
                   Next Level Web Developemet
                 </h1>
                 <h2>Programming Hero</h2>
-                <p>November 2024 - Present</p>
+                <p>November 2024 - May 2025</p>
               </div>
             </div>
           </div>
