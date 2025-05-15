@@ -1,5 +1,3 @@
-
-
 import { getAllProject } from "@/app/utils/actions/projectManagement";
 import type { TProject } from "@/types/types";
 import type { Metadata } from "next";
@@ -11,25 +9,28 @@ export const metadata: Metadata = {
   title: "HUMAYUN | Projects",
 };
 
-const ProjectsPage = async () => {
+const HomePageProjects = async () => {
   const projects = await getAllProject();
+//   console.log({ projects });
+
+  const threeProjects = projects?.data?.slice(0, 2);
+//   console.log({threeProjects});
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header with gradient underline */}
       <div className="flex flex-col items-center justify-center mb-12">
         <h1 className="text-3xl md:text-4xl text-center font-bold text-white relative border-b-2 border-[#64B5F6] inline-block">
-          All{" "}
+          My{" "}
           <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
             Projects
           </span>
-        
         </h1>
       </div>
 
       {/* Projects Grid - Single implementation for all screen sizes */}
       <div className="space-y-10 md:space-y-16 mb-10">
-        {projects?.data?.map((project: TProject) => (
+        {threeProjects?.map((project: TProject) => (
           <div
             key={project._id}
             className="group bg-gray-900/30 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg hover:shadow-blue-900/20 transition-all duration-300 hover:translate-y-[-5px]"
@@ -136,7 +137,11 @@ const ProjectsPage = async () => {
         ))}
       </div>
 
-     
+      <div className="flex items-center justify-center mb-10">
+        <Link href={"/projects"} className="px-4 py-2 rounded-md bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+          Show More
+        </Link>
+      </div>
     </div>
   );
 };
@@ -171,4 +176,4 @@ const ProjectLink = ({
   );
 };
 
-export default ProjectsPage;
+export default HomePageProjects;

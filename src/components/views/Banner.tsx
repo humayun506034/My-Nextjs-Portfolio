@@ -6,6 +6,7 @@ import { Typewriter } from "react-simple-typewriter"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import SocialIcons from "../SocialIcons/SocialIcons"
+import Link from "next/link"
 
 const Banner = () => {
   useEffect(() => {
@@ -52,8 +53,10 @@ const Banner = () => {
           </div>
 
           <div data-aos="fade-up" data-aos-duration="1000" className="pt-4">
-            <button className="bg-blue-500 rounded-full hover:scale-105 transition-transform duration-300 px-6 py-3 font-bold text-white">
+            <button className="px-4 py-2 rounded-md bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+              <Link href={'/contact'}>
               Hire Me
+              </Link>
             </button>
           </div>
         </div>

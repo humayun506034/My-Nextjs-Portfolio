@@ -49,7 +49,7 @@ const ContactMe = () => {
     <div className="mb-5 lg:mb-10">
       <div className="flex items-center justify-center mb-4">
         <h1
-          data-aos="fade-down"
+          data-aos="zoom-in"
           className="text-2xl md:text-3xl text-center text-white font-bold border-b-2 border-[#64B5F6] inline-block mb-5 lg:mb-10"
         >
           Contact <span className="text-[#64B5F6]">Me</span>
@@ -59,10 +59,10 @@ const ContactMe = () => {
       <div className="mx-auto text-white px-5 flex justify-center items-center">
         <div className="flex flex-col gap-10 md:flex-row w-full items-center h-auto justify-center">
           {/* Contact Information */}
-          <div className="flex gap-7 flex-col w-full" data-aos="fade-right">
+          <div className="flex gap-7 flex-col w-full" data-aos="zoom-in">
             <div
               className="flex gap-2 items-center"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-delay="100"
             >
               <IoLogoWhatsapp className="text-xl text-[#64B5F6]" />
@@ -71,7 +71,7 @@ const ContactMe = () => {
 
             <div
               className="flex gap-2 items-center"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-delay="200"
             >
               <FaEnvelope className="text-xl text-[#64B5F6]" />
@@ -80,7 +80,7 @@ const ContactMe = () => {
 
             <div
               className="flex gap-2 items-center"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-delay="300"
             >
               <IoCall className="text-xl text-[#64B5F6]" />
@@ -89,7 +89,7 @@ const ContactMe = () => {
 
             <div
               className="flex gap-2 items-center"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-delay="400"
             >
               <FaLocationDot className="text-xl text-[#64B5F6]" />
@@ -98,7 +98,7 @@ const ContactMe = () => {
 
             <div
               className="flex gap-4 items-center mt-4"
-              data-aos="fade-up"
+              data-aos="zoom-in"
               data-aos-delay="500"
             >
               {/* Social Icons */}
@@ -107,13 +107,13 @@ const ContactMe = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="w-full" data-aos="fade-left">
+          <div className="w-full" data-aos="zoom-in">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-2 gap-5"
             >
               <input
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay="100"
                 className="block px-3 py-2 w-full rounded-lg bg-gray-800 col-span-2 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 required
@@ -123,7 +123,7 @@ const ContactMe = () => {
               />
 
               <input
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay="200"
                 className="block px-3 py-2 w-full rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 required
@@ -133,7 +133,7 @@ const ContactMe = () => {
               />
 
               <select
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay="300"
                 className="block px-3 py-2 w-full rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 defaultValue={""}
@@ -148,7 +148,7 @@ const ContactMe = () => {
               </select>
 
               <input
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay="400"
                 className="block px-3 py-2 w-full rounded-lg bg-gray-800 col-span-2 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 required
@@ -158,7 +158,7 @@ const ContactMe = () => {
               />
 
               <textarea
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay="500"
                 className="block px-3 py-2 w-full rounded-lg col-span-2 bg-gray-800 min-h-[120px] focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 required
@@ -167,7 +167,7 @@ const ContactMe = () => {
               />
 
               <div
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay="600"
                 className="flex col-span-2 justify-center items-center mt-2"
               >
