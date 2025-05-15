@@ -125,7 +125,7 @@ const ContactMe = () => {
               <input
                 data-aos="zoom-in"
                 data-aos-delay="200"
-                className="block px-3 py-2 w-full rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
+                className="block px-3 py-2 w-full  col-span-2 lg:col-span-1 rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 required
                 type="number"
                 {...register("phone", { required: true })}
@@ -135,7 +135,7 @@ const ContactMe = () => {
               <select
                 data-aos="zoom-in"
                 data-aos-delay="300"
-                className="block px-3 py-2 w-full rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
+                className="block px-3 py-2 w-full col-span-2 lg:col-span-1  rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-[#64B5F6] transition-all"
                 defaultValue={""}
                 {...register("subject", { required: true })}
               >

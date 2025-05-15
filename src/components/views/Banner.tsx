@@ -25,7 +25,7 @@ const Banner = () => {
           <h1
             data-aos="fade-left"
             data-aos-duration="1000"
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold"
+            className="text-2xl md:text-3xl lg:text-4xl font-extrabold"
           >
             MD. HUMAYUN KABIR SOBUJ
           </h1>
