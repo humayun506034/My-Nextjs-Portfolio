@@ -94,7 +94,7 @@ export default function ProjectUpdateFrom(
                   </label>
                   <input
                     type="text"
-                    className="w-full bg-gray-700 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
+                    className="w-full  text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                     placeholder="Enter blog title"
                     defaultValue={project?.title}
                     {...register("title", { required: true })}
