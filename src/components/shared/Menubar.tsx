@@ -271,6 +271,7 @@ const Menubar = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/projects", label: "Projects" },
+    { path: "/blog", label: "Blogs" },
     { path: "/contact", label: "Contact" },
   ]
 
