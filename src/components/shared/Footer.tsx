@@ -1,3 +1,4 @@
+"use client"
 import SocialIcons from "../SocialIcons/SocialIcons";
 
 const Footer = () => {
